@@ -19,7 +19,26 @@ to serve the files as close, and fast as possible to your users:
 
 ##### Example using jsDelivr
 
-Just add a link to the css file in your `<head>`:
+Just add a link to the css file in your `<head>
+<!-- Google tag (gtag.js) event - delayed navigation helper -->
+<script>
+  // Helper function to delay opening a URL until a gtag event is sent.
+  // Call it in response to an action that should navigate to a URL.
+  function gtagSendEvent(url) {
+    var callback = function () {
+      if (typeof url === 'string') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'ads_conversion_Submit_lead_form_1', {
+      'event_callback': callback,
+      'event_timeout': 2000,
+      // <event_parameters>
+    });
+    return false;
+  }
+</script>
+`:
 
 ```html
 <!-- Add the slick-theme.css if you want default styling -->
