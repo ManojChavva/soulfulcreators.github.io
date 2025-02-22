@@ -66,7 +66,90 @@ FACEBOOK: https://www.facebook.com/themefisher
   <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
+
+<!-- Small Popup -->
+<div id="smallPopup">
+  <div id="helloMessage">Hello!</div> <!-- Hello message -->
+  <img src="images/thendral.jpg" alt="Chatbot Assistant">
+  <h2>Hi! I'm Joe</h2>
+  <p> You can reach me on +91 8190909018</p>
+  <p>To request a call back. Fill out form</p>
+  <p>மீண்டும் அழைப்பைக் கோருவதற்கு. உங்கள் விவரங்களை இங்கே சமர்ப்பிக்கவும்</p>
+  <button id="fillOutFormButton" onclick="showForm()">Fill Out Form</button>
+ <button id="closeThendral" onclick="hideThendral()">×</button>
+  <button class="closeThendral" onclick="hideThendral()" colour = blue>Close</button> 
+ <!-- Second extra close button at the bottom -->
+
+</div>
+
+
+  <!-- Fullscreen Form Popup -->
+  <div id="formPopup">
+    <button class="closeButton" onclick="closeForm()">×</button>
+    <iframe src="https://forms.gle/bEm9FLDnRE6A579GA" title="Contact Form"></iframe>
+  </div>
+
+  <!-- Minimized Thendral Button -->
+  <div id="minimizedThendral" onclick="restoreForm()">
+    <img src="images/thendral.jpg" alt="Chatbot Assistant">
+    <p>Request a Call?</p>
+  </div>
+  
+
+  <script>
+    // Show the small popup 2 seconds after the page loads
+    window.onload = function() {
+  setTimeout(function() {
+    // Show the hello message first
+    var helloMessage = document.getElementById("helloMessage");
+    helloMessage.style.display = "block";
+
+    // Show the popup with transition and sparkle effect
+    var popup = document.getElementById("smallPopup");
+    popup.style.display = "block"; // Set display to block
+    setTimeout(function() {
+      popup.classList.add("show"); // Add the 'show' class to trigger the transition and sparkle
+    }, 50); // Delay to ensure display:block is applied before the transition starts
+
+    // Hide the hello message after a short duration
+    setTimeout(function() {
+      helloMessage.style.display = "none";
+    }, 2000); // Hide after 2 seconds
+  }, 3000); // Delay the popup for 3 seconds
+
+  document.getElementById("closeThendral").style.display = "block"; 
+};
+
+
+
+    // Show the fullscreen form popup and hide the small popup
+    function showForm() {
+      document.getElementById("smallPopup").style.display = "none";
+      document.getElementById("formPopup").style.display = "block";
+      document.getElementById("minimizedThendral").style.display = "flex";
+    }
+
+    // Close the fullscreen form popup and show the minimized Thendral button
+    function closeForm() {
+      document.getElementById("formPopup").style.display = "none";
+      document.getElementById("minimizedThendral").style.display = "flex";
+      document.getElementById("smallPopup").style.display = "block";
+      document.getElementById("closeThendral").style.display = "block"; // Show the 'X' button after form close
+    }
+
+    // Hide the Thendral pop-up but keep the minimized Thendral button visible
+    function hideThendral() {
+      document.getElementById("smallPopup").style.display = "none";
+    }
+
+    // Restore the form popup and hide the minimized Thendral button
+    function restoreForm() {
+      document.getElementById("formPopup").style.display = "block";
+      document.getElementById("minimizedThendral").style.display = "none";
+    }
+  </script>
+
+
   <div class="body-inner">
 
     <div id="top-bar" class="top-bar">

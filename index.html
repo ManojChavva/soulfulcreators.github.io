@@ -19,72 +19,6 @@ TWITTER: https://twitter.com/themefisher
 FACEBOOK: https://www.facebook.com/themefisher
 -->
 
-<!--
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Locator</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <style>
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-      }
-
-      gmpx-store-locator {
-        width: 100%;
-        height: 100%;
-
-        /* These parameters customize the appearance of Locator Plus. See the documentation at
-           https://github.com/googlemaps/extended-component-library/blob/main/src/store_locator/README.md
-           for more information. */
-        --gmpx-color-surface: #fff;
-        --gmpx-color-on-surface: #212121;
-        --gmpx-color-on-surface-variant: #757575;
-        --gmpx-color-primary: #1967d2;
-        --gmpx-color-outline: #e0e0e0;
-        --gmpx-fixed-panel-width-row-layout: 28.5em;
-        --gmpx-fixed-panel-height-column-layout: 65%;
-        --gmpx-font-family-base: "Roboto", sans-serif;
-        --gmpx-font-family-headings: "Roboto", sans-serif;
-        --gmpx-font-size-base: 0.875rem;
-        --gmpx-hours-color-open: #188038;
-        --gmpx-hours-color-closed: #d50000;
-        --gmpx-rating-color: #ffb300;
-        --gmpx-rating-color-empty: #e0e0e0;
-      }
-    </style>
-    <script>
-      const CONFIGURATION = {
-        "locations": [
-          {"title":"Soulful Creators","address1":"Dr. Raghavan Colony Main Rd, Vadapalani","address2":"Chennai, Tamil Nadu, India","coords":{"lat":13.0475991,"lng":80.2159476},"placeId":"ChIJ0_liUmhnUjoRkW-Z33HdEoo"}
-        ],
-        "mapOptions": {"center":{"lat":38.0,"lng":-100.0},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":false,"zoom":4,"zoomControl":true,"maxZoom":17,"mapId":""},
-        "mapsApiKey": "YOUR_API_KEY_HERE",
-        "capabilities": {"input":false,"autocomplete":false,"directions":false,"distanceMatrix":false,"details":false,"actions":false}
-      };
-
-    </script>
-    <script type="module">
-      document.addEventListener('DOMContentLoaded', async () => {
-        await customElements.whenDefined('gmpx-store-locator');
-        const locator = document.querySelector('gmpx-store-locator');
-        locator.configureFromQuickBuilder(CONFIGURATION);
-      });
-    </script>
-  </head>
-  <body>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/@googlemaps/extended-component-library/0.6.11/index.min.js"></script>
-
-    
-    <gmpx-api-loader key="YOUR_API_KEY_HERE" solution-channel="GMP_QB_locatorplus_v11_c"></gmpx-api-loader>
-    <gmpx-store-locator map-id="DEMO_MAP_ID"></gmpx-store-locator>
-  </body>
-</html>
-
--->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -135,7 +69,6 @@ FACEBOOK: https://www.facebook.com/themefisher
   <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
 
 <!-- Small Popup -->
 <div id="smallPopup">
@@ -161,9 +94,10 @@ FACEBOOK: https://www.facebook.com/themefisher
 
   <!-- Minimized Thendral Button -->
   <div id="minimizedThendral" onclick="restoreForm()">
-    <!-- <p> Enquiry? </p> -->
     <img src="images/thendral.jpg" alt="Chatbot Assistant">
+    <p>Request a Call?</p>
   </div>
+  
 
   <script>
     // Show the small popup 2 seconds after the page loads
@@ -217,7 +151,6 @@ FACEBOOK: https://www.facebook.com/themefisher
       document.getElementById("minimizedThendral").style.display = "none";
     }
   </script>
-
 
 
 
@@ -485,7 +418,7 @@ FACEBOOK: https://www.facebook.com/themefisher
           </div><!-- Col end -->
           <div class="col-md-4 text-center text-md-right mt-3 mt-md-0">
               <div class="call-to-action-btn">
-                <a class="btn btn-dark" href="#">Request Quote</a>
+                <a class="btn btn-dark" href="contact.html">Request Quote</a>
               </div>
           </div><!-- col end -->
         </div><!-- row end -->

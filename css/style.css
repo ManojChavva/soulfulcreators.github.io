@@ -3478,24 +3478,60 @@ label {
   position: fixed;
   bottom: 60px;
   right: 20px;
-  width: 110px;  /* Increased size */
-  height: 110px; /* Increased size */
-  /*background-color: #007BFF; */
-  border-radius: 50%;
-  /*box-shadow: 0px 4px 8px rgba(0,0,0,0.1); */
+  width: 150px;  /* Increased size for better visual impact */
+  height: 150px; /* Increased size */
+  /*background-color: #007BFF;  Background color for button 
+  
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);*/
+  border-radius: 50%; 
   z-index: 1000;
   display: flex;
+  flex-direction: column;  /* Stack the image and text vertically */
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  animation: blink 3s infinite;
+  text-align: center; /* Center-align text */
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: blink 1s infinite;
+}
+
+/* Animation for blinking effect */
+@keyframes blink {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
 }
 
 #minimizedThendral img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
+  width: 80px;  /* Set the image size */
+  height: 80px; /* Maintain aspect ratio */
+  border-radius: 50%; /* Keep the image circular */
+  object-fit: cover; /* Ensure the image fits well */
 }
+
+/* Text styling below the image */
+#minimizedThendral p {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(47, 22, 205); /* White text to stand out against the background */
+  margin: 0; /* Remove default margin */
+}
+
+/* Hover effect for the button */
+#minimizedThendral:hover {
+  transform: scale(1.1);  /* Slightly enlarge on hover */
+  box-shadow: 0px 6px 12px rgba(0,0,0,0.2); /* Increase shadow for hover */
+}
+
+
 
 /* Close button styling for Thendral */
 #closeThendral {
