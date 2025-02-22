@@ -19,6 +19,73 @@ TWITTER: https://twitter.com/themefisher
 FACEBOOK: https://www.facebook.com/themefisher
 -->
 
+<!--
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Locator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      gmpx-store-locator {
+        width: 100%;
+        height: 100%;
+
+        /* These parameters customize the appearance of Locator Plus. See the documentation at
+           https://github.com/googlemaps/extended-component-library/blob/main/src/store_locator/README.md
+           for more information. */
+        --gmpx-color-surface: #fff;
+        --gmpx-color-on-surface: #212121;
+        --gmpx-color-on-surface-variant: #757575;
+        --gmpx-color-primary: #1967d2;
+        --gmpx-color-outline: #e0e0e0;
+        --gmpx-fixed-panel-width-row-layout: 28.5em;
+        --gmpx-fixed-panel-height-column-layout: 65%;
+        --gmpx-font-family-base: "Roboto", sans-serif;
+        --gmpx-font-family-headings: "Roboto", sans-serif;
+        --gmpx-font-size-base: 0.875rem;
+        --gmpx-hours-color-open: #188038;
+        --gmpx-hours-color-closed: #d50000;
+        --gmpx-rating-color: #ffb300;
+        --gmpx-rating-color-empty: #e0e0e0;
+      }
+    </style>
+    <script>
+      const CONFIGURATION = {
+        "locations": [
+          {"title":"Soulful Creators","address1":"Dr. Raghavan Colony Main Rd, Vadapalani","address2":"Chennai, Tamil Nadu, India","coords":{"lat":13.0475991,"lng":80.2159476},"placeId":"ChIJ0_liUmhnUjoRkW-Z33HdEoo"}
+        ],
+        "mapOptions": {"center":{"lat":38.0,"lng":-100.0},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":false,"zoom":4,"zoomControl":true,"maxZoom":17,"mapId":""},
+        "mapsApiKey": "YOUR_API_KEY_HERE",
+        "capabilities": {"input":false,"autocomplete":false,"directions":false,"distanceMatrix":false,"details":false,"actions":false}
+      };
+
+    </script>
+    <script type="module">
+      document.addEventListener('DOMContentLoaded', async () => {
+        await customElements.whenDefined('gmpx-store-locator');
+        const locator = document.querySelector('gmpx-store-locator');
+        locator.configureFromQuickBuilder(CONFIGURATION);
+      });
+    </script>
+  </head>
+  <body>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/@googlemaps/extended-component-library/0.6.11/index.min.js"></script>
+
+    
+    <gmpx-api-loader key="YOUR_API_KEY_HERE" solution-channel="GMP_QB_locatorplus_v11_c"></gmpx-api-loader>
+    <gmpx-store-locator map-id="DEMO_MAP_ID"></gmpx-store-locator>
+  </body>
+</html>
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,6 +136,92 @@ FACEBOOK: https://www.facebook.com/themefisher
 
 </head>
 <body>
+
+<!-- Small Popup -->
+<div id="smallPopup">
+  <div id="helloMessage">Hello!</div> <!-- Hello message -->
+  <img src="images/thendral.jpg" alt="Chatbot Assistant">
+  <h2>Hi! I'm Joe</h2>
+  <p> You can reach me on +91 8190909018</p>
+  <p>To request a call back. Fill out form</p>
+  <p>மீண்டும் அழைப்பைக் கோருவதற்கு. உங்கள் விவரங்களை இங்கே சமர்ப்பிக்கவும்</p>
+  <button id="fillOutFormButton" onclick="showForm()">Fill Out Form</button>
+ <button id="closeThendral" onclick="hideThendral()">×</button>
+  <button class="closeThendral" onclick="hideThendral()" colour = blue>Close</button> 
+ <!-- Second extra close button at the bottom -->
+
+</div>
+
+
+  <!-- Fullscreen Form Popup -->
+  <div id="formPopup">
+    <button class="closeButton" onclick="closeForm()">×</button>
+    <iframe src="https://forms.gle/bEm9FLDnRE6A579GA" title="Contact Form"></iframe>
+  </div>
+
+  <!-- Minimized Thendral Button -->
+  <div id="minimizedThendral" onclick="restoreForm()">
+    <!-- <p> Enquiry? </p> -->
+    <img src="images/thendral.jpg" alt="Chatbot Assistant">
+  </div>
+
+  <script>
+    // Show the small popup 2 seconds after the page loads
+    window.onload = function() {
+  setTimeout(function() {
+    // Show the hello message first
+    var helloMessage = document.getElementById("helloMessage");
+    helloMessage.style.display = "block";
+
+    // Show the popup with transition and sparkle effect
+    var popup = document.getElementById("smallPopup");
+    popup.style.display = "block"; // Set display to block
+    setTimeout(function() {
+      popup.classList.add("show"); // Add the 'show' class to trigger the transition and sparkle
+    }, 50); // Delay to ensure display:block is applied before the transition starts
+
+    // Hide the hello message after a short duration
+    setTimeout(function() {
+      helloMessage.style.display = "none";
+    }, 2000); // Hide after 2 seconds
+  }, 3000); // Delay the popup for 3 seconds
+
+  document.getElementById("closeThendral").style.display = "block"; 
+};
+
+
+
+    // Show the fullscreen form popup and hide the small popup
+    function showForm() {
+      document.getElementById("smallPopup").style.display = "none";
+      document.getElementById("formPopup").style.display = "block";
+      document.getElementById("minimizedThendral").style.display = "flex";
+    }
+
+    // Close the fullscreen form popup and show the minimized Thendral button
+    function closeForm() {
+      document.getElementById("formPopup").style.display = "none";
+      document.getElementById("minimizedThendral").style.display = "flex";
+      document.getElementById("smallPopup").style.display = "block";
+      document.getElementById("closeThendral").style.display = "block"; // Show the 'X' button after form close
+    }
+
+    // Hide the Thendral pop-up but keep the minimized Thendral button visible
+    function hideThendral() {
+      document.getElementById("smallPopup").style.display = "none";
+    }
+
+    // Restore the form popup and hide the minimized Thendral button
+    function restoreForm() {
+      document.getElementById("formPopup").style.display = "block";
+      document.getElementById("minimizedThendral").style.display = "none";
+    }
+  </script>
+
+
+
+
+
   <div class="body-inner">
 
     <div id="top-bar" class="top-bar">
