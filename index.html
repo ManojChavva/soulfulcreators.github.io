@@ -147,7 +147,7 @@ FACEBOOK: https://www.facebook.com/themefisher
     setTimeout(function() {
       helloMessage.style.display = "none";
     }, 2000); // Hide after 2 seconds
-  }, 3000); // Delay the popup for 3 seconds
+  }, 200000); // Delay the popup for 3 seconds
 
   document.getElementById("closeThendral").style.display = "block"; 
 };
@@ -350,9 +350,13 @@ FACEBOOK: https://www.facebook.com/themefisher
         </div>
         <!--/ Row end -->
 
-        <div class="nav-search">
-          <span id="search"><i class="fa fa-search"></i></span>
-        </div><!-- Search end -->
+        <div class="nav-search" style="display: flex; align-items: center;">
+          <img src="images/logo-removebg-preview.png" alt="Soulful Creators Logo" style="width: 100px; margin-right: 5px;">
+          <p style="margin: 0; font-family: 'Courier New', courier; font-size: 28px; color: rgb(163, 143, 132); text-shadow: rgba(165, 151, 151, 0.65) -1px 2px 4px;">
+            <strong>Soulful Creators</strong>
+          </p>
+        </div>
+        <!-- Search end -->
 
         <!-- <div class="search-block" style="display: none;">
           <label for="search-field" class="w-100 mb-0">
@@ -368,16 +372,45 @@ FACEBOOK: https://www.facebook.com/themefisher
 </header>
 <!--/ Header end -->
 
+
+
+  <!-- Contact form inside the slider container -->
+
+<div class="contact-form-container">
+  <h2>Contact Us</h2>
+  <form id="contact-form" class="contact-form" onsubmit="handleFormSubmit(event)">
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" required>
+    </div>
+    <div class="form-group">
+      <label for="comments">Comments</label>
+      <textarea id="comments" class="form-control" placeholder="Enter your comments" rows="4" required></textarea>
+    </div>
+    <button type="submit" id="submit-button" class="btn btn-primary">Submit</button>
+    <div id="form-success" style="display: none; color: green; margin-top: 15px;">Your message has been sent successfully!</div>
+    <div id="form-error" style="display: none; color: red; margin-top: 15px;">There was a problem submitting the form. Please try again.</div>
+  </form>
+</div>
 <div class="banner-carousel banner-carousel-1 mb-0">
+
   <div class="banner-carousel-item" style="background-image:url(images/slider-main/bg1.jpg)">
     <div class="slider-content">
         <div class="container h-100">
           <div class="row align-items-center h-100">
-              <div class="col-md-12 text-center">
+              <div class="col-md-12 text-left">
                 <h2 class="slide-title" data-animation-in="slideInLeft">We Make Your Dream</h2>
                 <h3 class="slide-sub-title" data-animation-in="slideInRight" >soulful creators</h3>
-                <p data-animation-in="slideInLeft" data-duration-in="1.2">
-                    <a href="services.html" class="slider btn btn-primary">Our Services</a>
+                <p data-animation-in="slideInLeft" data-duration-in="1">
+                    <a href="service-single.html" class="slider btn btn-primary">Our Services</a>
                     <a href="contact.html" class="slider btn btn-primary border">Contact Now</a>
                 </p>
               </div>
@@ -395,7 +428,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                 <h3 class="slide-title" data-animation-in="fadeIn">When Service Matters</h3>
                 <h3 class="slide-sub-title" data-animation-in="slideInLeft">Your Choice is Simple</h3>
                 <p data-animation-in="slideInRight">
-                    <a href="services.html" class="slider btn btn-primary border">Our Services</a>
+                    <a href="service-single.html" class="slider btn btn-primary border">Our Services</a>
                 </p>
               </div>
           </div>
@@ -404,7 +437,7 @@ FACEBOOK: https://www.facebook.com/themefisher
   </div>
 
   <div class="banner-carousel-item" style="background-image:url(images/slider-main/bg3.jpg)">
-    <div class="slider-content text-right">
+    <div class="slider-content text-left">
         <div class="container h-100">
           <div class="row align-items-center h-100">
               <div class="col-md-12">
@@ -421,6 +454,8 @@ FACEBOOK: https://www.facebook.com/themefisher
     </div>
   </div>
 </div>
+
+
 
 <section class="call-to-action-box no-padding">
   <div class="container">
@@ -1145,6 +1180,7 @@ FACEBOOK: https://www.facebook.com/themefisher
   <!-- shuffle -->
   <script src="plugins/shuffle/shuffle.min.js" defer></script>
 
+  <script src="form-handler.js"></script>
 
   <!-- Google Map API Key-->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>

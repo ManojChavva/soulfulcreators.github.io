@@ -667,8 +667,10 @@ ul.top-info li p.info-text {
 
 .header-one,
 .header-one .site-navigation {
-  background: #23282d;
+  background: #6a1e28;
 }
+
+
 
 .header-one .navbar-collapse {
   padding-left: 0;
@@ -3580,5 +3582,59 @@ label {
   }
   100% {
       opacity: 1;
+  }
+}
+
+
+
+.contact-form-container {
+  position: absolute;
+  top: 250px;
+  right: 40px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  border-radius: 8px;
+  z-index: 999; /* Higher than slider content */
+}
+
+.contact-form-container h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ffb600; /* Matching your theme color */
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form .form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Responsive adjustments matching your slider breakpoints */
+@media (max-width: 991px) {
+  .contact-form-container {
+    width: 280px;
+    padding: 15px;
+  }
+  
+  .contact-form-container h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .contact-form-container {
+    position: relative;
+    width: 100%;
+    top: 0;
+    right: 0;
+    margin-bottom: 20px;
   }
 }
