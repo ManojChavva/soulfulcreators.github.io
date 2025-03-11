@@ -137,7 +137,7 @@ FACEBOOK: https://www.facebook.com/themefisher
     setTimeout(function() {
       helloMessage.style.display = "none";
     }, 2000); // Hide after 2 seconds
-  }, 3000); // Delay the popup for 3 seconds
+  }, 5000); // Delay the popup for 3 seconds
 
   document.getElementById("closeThendral").style.display = "block"; 
 };
@@ -148,7 +148,7 @@ FACEBOOK: https://www.facebook.com/themefisher
       document.getElementById("smallPopup").style.display = "none";
       document.getElementById("minimizedThendral").style.display = "flex";
       // Redirect to index.html with the contact form section
-      window.location.href = "index.html#contactFormSection";
+      window.location.href = "index.html#header";
     }
 
     // Close function modified since there's no form popup anymore
@@ -168,7 +168,7 @@ FACEBOOK: https://www.facebook.com/themefisher
       document.getElementById("minimizedThendral").style.display = "none";
       document.getElementById("smallPopup").style.display = "block";
       // Redirect to index.html with the contact form section
-      window.location.href = "index.html#contactFormSection";
+      window.location.href = "index.html#header";
     }
   </script>
 
@@ -260,7 +260,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                   
                   
                   <li class="header-get-a-quote">
-                    <a class="btn btn-primary" href="contact.html">Get A Quote</a>
+                    <a class="btn btn-primary" href="index.html#header" onclick="scrollToContact()">Get A Quote</a>
                   </li>
                 </ul><!-- Ul end -->
             </div><!-- header right end -->

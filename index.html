@@ -120,7 +120,7 @@ var scriptSrcElem = [
     setTimeout(function() {
       helloMessage.style.display = "none";
     }, 2000); // Hide after 2 second
-  }, 30000); // Delay the popup for 3 seconds
+  }, 90000); // Delay the popup for 3 seconds
 
   document.getElementById("closeThendral").style.display = "block"; 
 };
@@ -245,8 +245,9 @@ var scriptSrcElem = [
 
 
                   <li class="header-get-a-quote">
-                    <a class="btn btn-primary" href="contact.html">Get A Quote</a>
-                  </li>
+                    <a class="btn btn-primary" href="#header" onclick="scrollToContact()">Get A Quote</a>
+                </li>
+                
                 </ul><!-- Ul end -->
             </div><!-- header right end -->
           </div><!-- logo area end -->
@@ -435,7 +436,7 @@ var scriptSrcElem = [
           </div><!-- Col end -->
           <div class="col-md-4 text-center text-md-right mt-3 mt-md-0">
               <div class="call-to-action-btn">
-                <a class="btn btn-dark" href="contact.html">Request Quote</a>
+                <a class="btn btn-dark" href="#header" onclick="scrollToContact()">Request Quote</a>
               </div>
           </div><!-- col end -->
         </div><!-- row end -->

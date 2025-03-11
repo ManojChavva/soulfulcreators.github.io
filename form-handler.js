@@ -93,3 +93,9 @@ document.addEventListener('DOMContentLoaded', function() {
     contactForm.addEventListener('submit', handleFormSubmit);
   }
 });
+function scrollToContact() {
+  const element = document.getElementById('contactFormSection');
+  if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+  }
+}
