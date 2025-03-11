@@ -1,9 +1,21 @@
 // Google Apps Script form handler for contact form
 
+// Flag to track submission status
+let isSubmitting = false;
+
 // Function to handle form submission
 function handleFormSubmit(event) {
   // Prevent the default form submission
   event.preventDefault();
+  
+  // Prevent duplicate submissions
+  if (isSubmitting) {
+    console.log('Form submission already in progress');
+    return false;
+  }
+  
+  // Set submission flag to true
+  isSubmitting = true;
   
   // Get form values
   const name = document.getElementById('name').value;
@@ -49,6 +61,8 @@ function handleFormSubmit(event) {
       successMessage.style.display = 'none';
       document.getElementById('submit-button').disabled = false;
       document.getElementById('submit-button').textContent = 'Submit';
+      // Reset submission flag
+      isSubmitting = false;
     }, 3000);
   })
   .catch(error => {
@@ -63,8 +77,13 @@ function handleFormSubmit(event) {
     // Hide error message after 3 seconds
     setTimeout(function() {
       errorMessage.style.display = 'none';
+      // Reset submission flag
+      isSubmitting = false;
     }, 3000);
   });
+  
+  // Return false to ensure the form doesn't submit traditionally
+  return false;
 }
 
 // Add event listener when DOM is loaded

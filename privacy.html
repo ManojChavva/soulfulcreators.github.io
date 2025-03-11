@@ -1,49 +1,23 @@
 <!--
- // WEBSITE: https://themefisher.com
- // TWITTER: https://twitter.com/themefisher
- // FACEBOOK: https://www.facebook.com/themefisher
- // GITHUB: https://github.com/themefisher/
--->
+Author: Themefisher
+Author URI: https://themefisher.com
 
-<!-- 
-THEME: Soulful Creators
-VERSION: 1.0.0
-AUTHOR: Themefisher
-
-HOMEPAGE: https://themefisher.com/products/Soulful Creators-construction-template/
-DEMO: https://demo.themefisher.com/Soulful Creators/
-GITHUB: https://github.com/themefisher/Soulful Creators-Bootstrap-Construction-Template
-
-WEBSITE: https://themefisher.com
-TWITTER: https://twitter.com/themefisher
-FACEBOOK: https://www.facebook.com/themefisher
+Description: Soulful Creators - Construction HTML Template
+Version: 1.0.0
 -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) event - delayed navigation helper -->
-<script>
-  // Helper function to delay opening a URL until a gtag event is sent.
-  // Call it in response to an action that should navigate to a URL.
-  function gtagSendEvent(url) {
-    var callback = function () {
-      if (typeof url === 'string') {
-        window.location = url;
-      }
-    };
-    gtag('event', 'ads_conversion_Submit_lead_form_1', {
-      'event_callback': callback,
-      'event_timeout': 2000,
-      // <event_parameters>
-    });
-    return false;
-  }
-</script>
 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KX994HV8');</script>
+<!-- End Google Tag Manager -->
 
-  <!-- Basic Page Needs
-================================================== -->      
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQSJRRZJ3X"></script>
 <script>
@@ -70,7 +44,6 @@ FACEBOOK: https://www.facebook.com/themefisher
 
   <!-- CSS
 ================================================== -->
-  <!-- Bootstrap -->
   <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  <!-- FontAwesome -->
   <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
@@ -89,14 +62,13 @@ FACEBOOK: https://www.facebook.com/themefisher
 </script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag(){window.dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'AW-16846533722');
 </script>
 </head>
 
-<!-- Small Popup -->
 <div id="smallPopup">
   <div id="helloMessage">Hello!</div> <!-- Hello message -->
   <img src="images/thendral.jpg" alt="Chatbot Assistant">
@@ -112,18 +84,11 @@ FACEBOOK: https://www.facebook.com/themefisher
 </div>
 
 
-  <!-- Fullscreen Form Popup -->
-  <div id="formPopup">
-    <button class="closeButton" onclick="closeForm()">×</button>
-    <iframe src="https://forms.gle/bEm9FLDnRE6A579GA" title="Contact Form"></iframe>
-  </div>
-
   <!-- Minimized Thendral Button -->
   <div id="minimizedThendral" onclick="restoreForm()">
     <img src="images/thendral.jpg" alt="Chatbot Assistant">
     <p>Request a Call?</p>
   </div>
-  
 
   <script>
     // Show the small popup 2 seconds after the page loads
@@ -150,17 +115,16 @@ FACEBOOK: https://www.facebook.com/themefisher
 };
 
 
-
-    // Show the fullscreen form popup and hide the small popup
+    // Modified to redirect to index.html with the contact form section
     function showForm() {
       document.getElementById("smallPopup").style.display = "none";
-      document.getElementById("formPopup").style.display = "block";
       document.getElementById("minimizedThendral").style.display = "flex";
+      // Redirect to index.html with the contact form section
+      window.location.href = "index.html#contactFormSection";
     }
 
-    // Close the fullscreen form popup and show the minimized Thendral button
+    // Close function modified since there's no form popup anymore
     function closeForm() {
-      document.getElementById("formPopup").style.display = "none";
       document.getElementById("minimizedThendral").style.display = "flex";
       document.getElementById("smallPopup").style.display = "block";
       document.getElementById("closeThendral").style.display = "block"; // Show the 'X' button after form close
@@ -171,10 +135,12 @@ FACEBOOK: https://www.facebook.com/themefisher
       document.getElementById("smallPopup").style.display = "none";
     }
 
-    // Restore the form popup and hide the minimized Thendral button
+    // Restore function modified to redirect to index.html with the contact form section
     function restoreForm() {
-      document.getElementById("formPopup").style.display = "block";
       document.getElementById("minimizedThendral").style.display = "none";
+      document.getElementById("smallPopup").style.display = "block";
+      // Redirect to index.html with the contact form section
+      window.location.href = "index.html#contactFormSection";
     }
   </script>
 
@@ -191,16 +157,13 @@ FACEBOOK: https://www.facebook.com/themefisher
                 </ul>
               </div>
               <!--/ Top info end -->
-  
+
                             <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
                 <ul class="list-unstyled">
                     <li>
-                      <!-- <a title="Facebook" href="https://facebbok.com/themefisher.com">
+                      <a title="Facebook" href="https://www.facebook.com/profile.php?id=61556021287242&mibextid=ZbWKwL">
                           <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
                       </a>
-                      <a title="Twitter" href="https://twitter.com/themefisher.com">
-                          <span class="social-icon"><i class="fab fa-twitter"></i></span>
-                      </a> -->
                       <a title="Instagram" href="https://www.instagram.com/soulful.creators?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
                           <span class="social-icon"><i class="fab fa-instagram"></i></span>
                       </a>
@@ -225,9 +188,9 @@ FACEBOOK: https://www.facebook.com/themefisher
         <div class="row align-items-center">
           <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
             <a class="d-flex align-items-center" href="index.html" style="text-decoration: none;">
-              <!-- Logo Image -->
+              <!-- Inserted logo with proper styles -->
               <img src="images/logo-removebg-preview.png" alt="Soulful Creators Logo" style="width: 100px; margin-right: 5px;">
-              <!-- Logo Text -->
+              <!-- Added company name with styled text to match branding -->
               <p style="margin: 0; font-family: 'Courier New', courier; font-size: 28px; color: rgb(163, 143, 132); text-shadow: rgba(165, 151, 151, 0.65) -1px 2px 4px;">
                 <strong>Soulful Creators</strong>
               </p>
@@ -257,14 +220,13 @@ FACEBOOK: https://www.facebook.com/themefisher
                       <div class="info-box-content">
                         <p class="info-box-title">Locate US</p>
                         <p class="info-box-subtitle" style="font-family: 'Material Icons', sans-serif; font-size: 16px; color: #555; display: flex; align-items: center;">
-                          <!-- Icon -->
+                          <!-- Using Material Icons for location icon in a centered, clean design -->
                           <a href="https://maps.app.goo.gl/hhHYr3gxTY4jZxGV7" style="font-family: 'Material Icons'; font-size: 18px; color: #000000;">&#xe567;</a>
                         </p>
                       </div>
                     </div>
                   </li>
-                  
-                  
+                  <!-- Original header contact info end -->
                   
                   <li class="header-get-a-quote">
                     <a class="btn btn-primary" href="contact.html">Get A Quote</a>
@@ -282,20 +244,19 @@ FACEBOOK: https://www.facebook.com/themefisher
         <div class="row">
           <div class="col-lg-12">
               <nav class="navbar navbar-expand-lg navbar-dark p-0">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 
                                       <div id="navbar-collapse" class="collapse navbar-collapse">
                   <ul class="nav navbar-nav mr-auto">
-                
-                      <!-- <li class="nav-item dropdown active">
-                          <a href="index.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Home </a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li class="active"><a href="index.html">Home One</a></li>
-                            <li><a href="index-2.html">Home Two</a></li>
-                          </ul>
-                      </li> -->
+                     <!-- <li class="nav-item dropdown active">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Home</a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li class="active"><a href="index.html">Home One</a></li>
+                          <li><a href="index-2.html">Home Two</a></li>
+                        </ul>
+                    </li> -->
 
                       <li class="nav-item dropdown">
                           <a href="index.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Company <i class="fa fa-angle-down"></i></a>
@@ -305,37 +266,41 @@ FACEBOOK: https://www.facebook.com/themefisher
                             <li><a href="testimonials.html">Testimonials</a></li>
                             <li><a href="faq.html">Faq</a></li>
                             <li><a href="privacy.html">privacy</a></li>
-                <!-- <li><a href="pricing.html">Pricing</a></li> -->
+                            <!-- <li><a href="pricing.html">Pricing</a></li> -->
                           </ul>
                       </li>
               
-                                            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-
+                                           <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
               
-                       <li class="nav-item"><a class="nav-link" href="service-single.html">services</a></li>
-
+                     <li class="nav-item"><a class="nav-link" href="service-single.html">services</a></li>
+                    <!-- <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Services <i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="services.html">Services All</a></li>
+                          <li><a href="service-single.html">Services Single</a></li>
+                        </ul>
+                    </li> -->
               
-                      <!-- <li class="nav-item dropdown">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Features <i class="fa fa-angle-down"></i></a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li><a href="typography.html">Typography</a></li>
-                            <li><a href="404.html">404</a></li>
-                            <li class="dropdown-submenu">
-                                <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Parent Menu</a>
-                                <ul class="dropdown-menu">
-                                  <li><a href="#!">Child Menu 1</a></li>
-                                  <li><a href="#!">Child Menu 2</a></li>
-                                  <li><a href="#!">Child Menu 3</a></li>
-                                </ul>
-                            </li>
-                          </ul>
-                      </li> -->
+                    <!-- <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Features <i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="typography.html">Typography</a></li>
+                          <li><a href="404.html">404</a></li>
+                          <li class="dropdown-submenu">
+                              <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Parent Menu</a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#!">Child Menu 1</a></li>
+                                <li><a href="#!">Child Menu 2</a></li>
+                                <li><a href="#!">Child Menu 3</a></li>
+                              </ul>
+                          </li>
+                        </ul>
+                    </li> -->
               
-                                            <li class="nav-item"><a class="nav-link" href="news-right-sidebar.html">Blogs</a></li>
-
+                                           <li class="nav-item"><a class="nav-link" href="news-right-sidebar.html">Blogs</a></li>
               
                       <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
+                  </ul>
                 </div>
               </nav>
           </div>
@@ -345,14 +310,24 @@ FACEBOOK: https://www.facebook.com/themefisher
 
                                       <div id="navbar-collapse" class="collapse navbar-collapse">
                   <ul class="nav navbar-nav mr-auto">
-                
-                      <!-- <li class="nav-item dropdown active">
-                          <a href="index.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Home </a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li class="active"><a href="index.html">Home One</a></li>
-                            <li><a href="index-2.html">Home Two</a></li>
-                          </ul>
-                      </li> -->
+                    <!-- <li class="nav-item dropdown active">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Home</a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="index.html">Home One</a></li>
+                          <li><a href="index-2.html">Home Two</a></li>
+                        </ul>
+                    </li>
+              
+                    <li class="nav-item dropdown">
+              </div>
+        <!-- Search end -->
+
+        <!-- <div class="search-block" style="display: none;">
+          <label for="search-field" class="w-100 mb-0">
+            <input type="text" class="form-control" id="search-field" placeholder="Type what you want and enter">
+          </label>
+          <span class="search-close">&times;</span>
+        </div> --> <!-- Site search end -->
     </div>
     <!--/ Container end -->
 
@@ -367,49 +342,44 @@ FACEBOOK: https://www.facebook.com/themefisher
 
     <div class="row text-center">
       <div class="col-12">
-        <!-- <h2 class="section-title">Reaching our Office</h2> -->
+        <!-- <h2 class="section-title">Grab the Attention</h2> -->
         <h3 class="section-sub-title">Privacy Policy</h3>
       </div>
     </div>
     <!--/ Title row end -->
 
-
-            <p>At Soulful Creators, we value your privacy and are committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website and interact with our online services.</p>
+            <p>At Soulful Creators, we value your privacy and are committed to protecting the personal information that you provide to us. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you interact with our website, services, or communication channels.</p>
                 <p>
-                1. Information We Collect: We may collect personal information, including your name, email address, phone number, and other contact details, when you engage with our website, sign up for newsletters, or submit inquiries about our real estate and construction services.</p>
+                1. Information We Collect: We may collect personal information, including your name, email address, phone number, location, and any other details you provide when filling out forms, subscribing to newsletters, requesting quotes, or contacting us.</p>
                 <p>
-                2. Purpose of Data Collection: The information we collect is used solely for commercial purposes to improve the services we offer, such as responding to inquiries, providing personalized content, and offering tailored marketing and promotional materials. We do not share or sell your personal information to third parties for marketing purposes.</p>
+                2. Purpose of Data Collection: The information we collect is used solely for communication, service delivery, and business operations. This includes:</p>
                 <p>
-                3. How We Use Your Information:
-                
-                To provide the requested services and support
-                To improve user experience and tailor content to your preferences
-                To communicate with you regarding real estate and construction updates, offers, and promotions
+                3. Responding to inquiries and service requests</p>
+                <p>
+                4. Providing information about our services</p>
+                <p>
                 To analyze website traffic and improve the functionality of our website</p>
-                4. Data Retention: We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy. Once it is no longer needed, we will take steps to securely delete or anonymize your data.</p>
                 <p>
-                5. Third-Party Services: We may use third-party tools and platforms (such as Google Ads) to improve our marketing efforts and enhance the user experience. These third parties may collect data in accordance with their privacy policies, and we encourage you to review their policies for more information.</p>
                 <p>
-                6. Cookies and Tracking Technologies: We use cookies and similar technologies to enhance your browsing experience and gather information about how our website is used. This helps us improve site performance, personalize content, and analyze site activity. You can choose to disable cookies through your browser settings, but this may affect the functionality of our website.</p>
+                5. Third-Party Services: We may use third-party tools and platforms (such as Google Analytics, social media platforms, or email marketing services) that may collect information about your interactions with our website. These third parties have their own privacy policies.</p>
                 <p>
-                7. Your Rights: You have the right to access, correct, or delete your personal information. If you wish to exercise any of these rights or have questions about your data, one contact us through enquiry form, mail: soulfullcreators@gmail.com or call us at 8190909018.</p>
+                6. Cookies and Tracking Technologies: We use cookies and similar technologies to enhance user experience, analyze website traffic, and personalize content. You can modify your browser settings to reject cookies, but this may affect certain functionalities of our website.</p>
                 <p>
-                8. Security: We implement appropriate security measures to protect your personal data from unauthorized access, alteration, or disclosure. However, no method of data transmission over the internet is 100% secure, and we cannot guarantee the absolute security of your information.</p>
+                7. Your Rights: You have the right to access, correct, or delete your personal information. If you wish to exercise these rights, please contact us using the information provided at the end of this policy.</p>
                 <p>
-                9. Changes to This Privacy Policy: We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any significant changes by updating the date at the top of this page.</p>
+                8. Security: We implement appropriate security measures to protect your personal data from unauthorized access, disclosure, or destruction.</p>
+                <p>
+                9. Changes to This Privacy Policy: We may update this Privacy Policy from time to time. Any changes will be posted on this page, and the "last updated" date will be modified accordingly.</p>
                 <p>
                 By using our website, you consent to the collection and use of your personal information as outlined in this Privacy Policy.</p>
                 <p>
                 If you have any questions or concerns regarding this Privacy Policy, please contact us at soulfullcreators@gmail.com .</p>
-                
-            
-
-      
+ 
 
     <div class="gap-60"></div>
 
     <!-- <div class="google-map">
-      <div id="map" class="map" data-latitude="40.712776" data-longitude="-74.005974" data-marker="images/marker.png" data-marker-name="Soulful Creators"></div>
+      <div id="map" class="map" data-latitude="40.712776" data-longitude="-74.005974" data-marker="images/marker.png" data-marker-name="Constra"></div>
     </div> -->
 
     <div class="gap-40"></div>
@@ -417,7 +387,8 @@ FACEBOOK: https://www.facebook.com/themefisher
     <div class="row">
       <div class="col-md-12">
         <h3 class="column-title">We love to hear</h3>
-      
+        <!-- contact form works with formspree.io  -->
+        <!-- contact form activation doc: https://docs.themefisher.com/soulful creators/contact-form/ -->
         <!-- <form id="contact-form" action="#" method="post" role="form">
           <div class="error-container"></div>
           <div class="row">
@@ -463,12 +434,11 @@ FACEBOOK: https://www.facebook.com/themefisher
           <div class="col-lg-4 col-md-6 footer-widget footer-about">
             <h3 class="widget-title">About Us</h3>
             <img loading="lazy" width="200px" class="footer-logo" src="images/footer-logo.png" alt="Soulful Creators">
-            <p>we specialize in real estate, property development, land sales, and villa plot sales, offering premium investment opportunities in prime locations of Chennai. Whether you’re looking for a dream home, a customized villa, or a high-value land investment, we provide expert guidance and top-notch properties that suit your needs.</p>
+            <p>we specialize in real estate, property development, land sales, and villa plot sales, offering a perfect blend of affordability and luxury in prime Chennai locations</p>
             <div class="footer-social">
               <ul>
-                <!-- <li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i
-                      class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://twitter.com/themefisher" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <li><a href="https://www.facebook.com/profile.php?id=61556021287242&mibextid=ZbWKwL" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <!-- <li><a href="https://twitter.com/themefisher" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                 </li> -->
                 <li><a href="https://www.instagram.com/soulful.creators?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram"><i
                       class="fab fa-instagram"></i></a></li>
@@ -517,7 +487,7 @@ FACEBOOK: https://www.facebook.com/themefisher
             <div class="footer-menu text-center text-md-right">
               <ul class="list-unstyled">
                 <li><a href="about.html">About</a></li>
-                <!-- <li><a href="team.html">Our People</a></li> --></li>
+                <!-- <li><a href="team.html">Our people</a></li> -->
                 <li><a href="faq.html">Faq</a></li>
                 <li><a href="news-left-sidebar.html">Blog</a></li>
                 <li><a href="privacy.html">privacy</a></li>
@@ -555,7 +525,7 @@ FACEBOOK: https://www.facebook.com/themefisher
 
 
   <!-- Google Map API Key-->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" defer></script>
   <!-- Google Map Plugin-->
   <script src="plugins/google-map/map.js" defer></script>
 
@@ -563,6 +533,6 @@ FACEBOOK: https://www.facebook.com/themefisher
   <script src="js/script.js"></script>
 
   </div><!-- Body inner end -->
-  </body>
+
 
   </html>

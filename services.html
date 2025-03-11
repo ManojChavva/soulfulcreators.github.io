@@ -96,7 +96,6 @@ FACEBOOK: https://www.facebook.com/themefisher
 </script>
 </head>
 
-<!-- Small Popup -->
 <div id="smallPopup">
   <div id="helloMessage">Hello!</div> <!-- Hello message -->
   <img src="images/thendral.jpg" alt="Chatbot Assistant">
@@ -112,18 +111,11 @@ FACEBOOK: https://www.facebook.com/themefisher
 </div>
 
 
-  <!-- Fullscreen Form Popup -->
-  <div id="formPopup">
-    <button class="closeButton" onclick="closeForm()">×</button>
-    <iframe src="https://forms.gle/bEm9FLDnRE6A579GA" title="Contact Form"></iframe>
-  </div>
-
   <!-- Minimized Thendral Button -->
   <div id="minimizedThendral" onclick="restoreForm()">
     <img src="images/thendral.jpg" alt="Chatbot Assistant">
     <p>Request a Call?</p>
   </div>
-  
 
   <script>
     // Show the small popup 2 seconds after the page loads
@@ -150,17 +142,16 @@ FACEBOOK: https://www.facebook.com/themefisher
 };
 
 
-
-    // Show the fullscreen form popup and hide the small popup
+    // Modified to redirect to index.html with the contact form section
     function showForm() {
       document.getElementById("smallPopup").style.display = "none";
-      document.getElementById("formPopup").style.display = "block";
       document.getElementById("minimizedThendral").style.display = "flex";
+      // Redirect to index.html with the contact form section
+      window.location.href = "index.html#contactFormSection";
     }
 
-    // Close the fullscreen form popup and show the minimized Thendral button
+    // Close function modified since there's no form popup anymore
     function closeForm() {
-      document.getElementById("formPopup").style.display = "none";
       document.getElementById("minimizedThendral").style.display = "flex";
       document.getElementById("smallPopup").style.display = "block";
       document.getElementById("closeThendral").style.display = "block"; // Show the 'X' button after form close
@@ -171,13 +162,14 @@ FACEBOOK: https://www.facebook.com/themefisher
       document.getElementById("smallPopup").style.display = "none";
     }
 
-    // Restore the form popup and hide the minimized Thendral button
+    // Restore function modified to redirect to index.html with the contact form section
     function restoreForm() {
-      document.getElementById("formPopup").style.display = "block";
       document.getElementById("minimizedThendral").style.display = "none";
+      document.getElementById("smallPopup").style.display = "block";
+      // Redirect to index.html with the contact form section
+      window.location.href = "index.html#contactFormSection";
     }
   </script>
-
 
   <div class="body-inner">
 
